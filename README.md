@@ -5,19 +5,21 @@ This is a simple .Net library for accessing Pocket (Formerly Read it Later). It 
 
 Please see the demo project for more info.
 
+
+<pre>
 Get your Consumer Key and Access Token from here:
 http://getpocket.com/developer/docs/authentication
 
-Initialize Pocket <br />
-<code>Pocket pocket = new Pocket("Your Consumer Key", "Your Access Token");</code>
+//Initialize Pocket
+Pocket pocket = new Pocket("Your Consumer Key", "Your Access Token");
 
-Add an article<br />
-<code>Item item = pocket.Add("http://en.wikipedia.org/wiki/Pocket_(application)");</code>
+//Add an article
+Item item = pocket.Add("http://en.wikipedia.org/wiki/Pocket_(application)");
 
-Retrieve all items<br />
-<code>List<Item> items = pocket.Retrieve();</code>
+//Retrieve all items
+List<Item> items = pocket.Retrieve();
 
-Modify an item<br />
-<code>
+//Modify an item
 PocketAction action = new PocketAction("archive", "229279689", null);
-bool result = pocket.Modify(action);</code>
+bool result = pocket.Modify(action);
+</pre>
